@@ -20,7 +20,7 @@ router.get('/chooseType', (req, res) => {
 
 
 router.get('/header', (req, res) => {
-  res.send('header');
+  res.render('../public/user/header.ejs');
 });
 
 router.get('/experience', (req, res) => {
