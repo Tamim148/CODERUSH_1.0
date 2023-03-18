@@ -3,9 +3,9 @@ const app = express();
 const session = require('express-session');
 const flash = require('connect-flash');
 const passport = require('passport');
-
+const path = require('path');
 // Using the public folder as specified static resources
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Body Parser
 const bodyParser = require('body-parser');
@@ -28,7 +28,7 @@ app.use(flash());
 
 // using routers
 const userRoutes = require('./routes/user.routes');
-
 app.use(userRoutes);
+
 
 module.exports = app;

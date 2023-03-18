@@ -10,16 +10,16 @@ const getHeader = async (req, res) => {
 };
 
 const getExperience = async (req, res) => {
-  const {fullName, city, country, phone, email} = req.query;
-  const dummy = {fullName, city, country, phone, email};
+  const {fullName, dob, email, phone, address, country, city, gender} = req.query;
+  const dummy = {fullName, dob, email, phone, address, country, city, gender};
   info[0] = dummy;
   // await console.log(info[0]);
   res.render('../public/user/experience.ejs');
 };
 
 const getEducation = (req, res) => {
-  const {companyName, jobTitle, jobDescription, startDate, endDate} = req.query;
-  const dummy = {companyName, jobTitle, jobDescription, startDate, endDate};
+  const {jobTitle, companyName, jobDescription, startDate, endDate} = req.query;
+  const dummy = {jobTitle, companyName, jobDescription, startDate, endDate};
   info[1] = dummy;
   // console.log(info);
   res.render('../public/user/education.ejs');
@@ -33,11 +33,17 @@ const getSkills = (req, res) => {
   res.render('../public/user/skills.ejs');
 };
 const getSummary = (req, res) => {
-  const {skill} = req.query;
-  const dummy = {skill};
+  const {skill, achievement, interest, knownLanguage} = req.query;
+  const dummy = {skill, achievement, interest, knownLanguage};
   info[3] = dummy;
+  const {summary} = req.body;
+  console.log(summary);
   // console.log(info);
   res.render('../public/user/summary.ejs');
+};
+const postSummary = (req, res) => {
+  const {summary} = req.body;
+  console.log(summary);
 };
 const getSelectTemplate = (req, res) => {
   const {summary} = req.query;
@@ -73,4 +79,4 @@ const getIndex = async (req, res) => {
     client.end();
   });
 };
-module.exports = {info, getHeader, getExperience, getEducation, getSkills, getSummary, getSelectTemplate, getIndex};
+module.exports = {info, getHeader, getExperience, getEducation, getSkills, getSummary, getSelectTemplate, getIndex, postSummary};

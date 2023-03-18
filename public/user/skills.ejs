@@ -1,18 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>skills</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="form.js" defer></script>
+    <script src="transfer.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
+    <script src="https://superal.github.io/canvas2image/canvas2image.js"></script>
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="./templates/template1.css">
+    <link rel="stylesheet" href="./templates/template2.css">
+    <link rel="stylesheet" href="./templates/template3.css">
+
 </head>
+
 <body>
-  <h1> Enter your skills </h1>
-  <form action="/summary">
-    <input type="text" name="skill" placeholder="skill" id="skill">
-    <br>
-    <br>
-    <input type="submit" value="Submit">
-  </form>
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="color:#000000;">
+		<div class="container" style="font-size:20px;">
+			<a class="navbar-brand" href="index.html" style="font-size:32px;"><img src="images/MPCV.png" alt=""
+					height="75px"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="#pageHeader">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="header.ejs">Create Resume</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="about.html">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="faq.html">FAQ</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+    <!-- NavBar End -->
+
+
+    <div class="container-fluid p-0">
+
+       
+
+        <form id="form1" class="step step-1 active" action="/summary" method="GET">
+            
+            <div class="container mt-5">
+                <br>
+                <u>
+                <h1 class="d-flex justify-content-center m-5" style="font-weight: 800; margin-top: 5px;">Skills & Achievements</h1>
+                </u>
+            </div>
+
+            <div class="card-container mb-5 shadow p-3 mb-5 bg-white" style="width:850px; margin:auto" id="card">
+             
+                <hr style="width:95%; margin: 10px;" , size="3" class="bg-secondary">
+           
+
+                <div class="row mx-5 mb-5">
+                    <div class="col-12">
+                      <div class="form-group">
+                        <label for="skill" style="margin-top: 10px;"  class="form-label">Skills</label>
+                        <input type="text"style="height: 5em; width: 100%" class="form-control" id="skill" name="skill" placeholder="Skills" required>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-group">
+                        <label for="achievement" style="margin-top: 10px;" class="form-label">Achievements</label>
+                        <input type="text"style="height: 5em; width: 100%" class="form-control" id="achievement" name="achievement" placeholder="Achievements" required>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-group">
+                        <label for="interest"style="margin-top: 10px;" class="form-label">Interests</label>
+                        <input type="text"style="height: 5em; width: 100%" class="form-control" id="interest" name="interest" placeholder="Interests" required>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-group">
+                        <label for="knownLanguage"style="margin-top: 10px;" class="form-label">Known Languages</label>
+                        <input type="text" class="form-control" id="knownLanguage" name="knownLanguage" placeholder="Known Languages" required>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="btn-box container d-block text-center" style="width:850px;">
+                  <input type="submit" value="Submit">
+                  <!-- <a href="/education">
+                <button type="button" class="next_btn" id="next1">Back<i
+                    class="bi bi-arrow-left-circle ms-3"></i></button>
+                </a>  
+                <a href="/summary">
+                  <button type="button" class="next_btn" id="next1">Next Step<i
+                          class="bi bi-arrow-right-circle ms-3"></i></button>
+                </a>   -->
+                      
+            </div>
+            
+
+        </form>
+    </div>
+    <footer class="page-footer font-small black">
+		<div class="footer-copyright text-center py-3">© The Noob Squad Copyright 2023
+			
+		</div>
+	</footer>
 </body>
 </html>

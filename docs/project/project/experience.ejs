@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
     <script src="https://superal.github.io/canvas2image/canvas2image.js"></script>
-    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="./templates/template1.css">
     <link rel="stylesheet" href="./templates/template2.css">
     <link rel="stylesheet" href="./templates/template3.css">
@@ -64,94 +64,71 @@
 
         <!-- **********     FORM - 1    ********** -->
 
-        <form id="form1" class="step step-1 active" action="/experience" method="GET">
+        <form id="form1" class="step step-1 active" action="/education" method="GET">
             
             <div class="container mt-5">
                 <br>
                 <u>
-                <h1 class="d-flex justify-content-center m-5" style="font-weight: 800; margin-top: 5px;">Personal Details</h1>
+                <h1 class="d-flex justify-content-center m-5" style="font-weight: 800; margin-top: 5px;">Job Details</h1>
                 </u>
             </div>
 
             <div class="card-container mb-5 shadow p-3 mb-5 bg-white" style="width:850px; margin:auto" id="card">
-               
+             
                 <hr style="width:95%; margin: 10px;" , size="3" class="bg-secondary">
-                <div class="d-flex flex-row">
-                    <!-- <input type="file" accept="image/*" name="inpImg" id="inpImg">
-                    <div class="imgContainer float-left m-4">
-                        <img src="" alt="Image Preview" id="image">
-                        <span id="previewText"><span id="innerSpan"><i class="fas fa-upload me-2"></i>Upload
-                                photo</span></span>
-                    </div> -->
-                    <div class="row col-6  m-3 " style="float:left;">
-                        <div class="col-12">
-                            <label for="fullName" class="form-label">Full Name</label>
-                            <input type="text" class="form-control" id="fullName" name="fullName">
-                        </div>
-                        <div class="col-12">
-                            
-                                <label for="dob" class="form-label">Birth Date</label><br>
-                                <input type="text" class="date" id="dob" name="dob">
-                            
-                        </div>
-                    </div>
-                </div>
+           
 
                 <div class="row mx-5 mb-5">
                     <div class="col-md-6 ">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="text" class="form-control" id="email" name="email" placeholder="example@gmail.com" required>
+                        
+                        <label for="jobTitle" class="form-label">Job Title</label>
+                        <input type="text" class="form-control" id="jobTitle" name="jobTitle" placeholder="Job Title" >
                     </div>
 
                     <div class="col-md-6">
-                        <label for="phone" class="form-label">Phone</label>
-                        <input type="text" class="form-control" id="phone" name="phone" placeholder="xxxxxxxxxx" >
-                    </div>
+                        <label for="companyName" class="form-label">Company Name</label>
+                        <input type="text" class="form-control" id="companyName" name="companyName" placeholder="Company Name" >
+                     </div>
 
                     <div class="col-12 mt-3">
-                        <label for="address" class="form-label">Address</label>
-                        <input type="text" class="form-control" id="address" name="address" placeholder="Enter full address">
+                        <label for="jobDescription" class="form-label">Job Description</label>
+                        <input type="text" class="form-control" id="jobDescription" name="jobDescription" placeholder="Job Description">
                     </div>
 
 
                     <div class="col-md-5 mt-3">
-                        <label for="country" class="form-label">Country</label>
-                        <input type="text" class="form-control" id="country" name="country" placeholder="Enter Country">
+                        <label for="startDate" class="form-label">Start Date</label><br>
+                        <input type="text" class="date" id="startDate" name="startDate">
                     </div>
 
                     <div class="col-md-3 mt-3">
-                        <label for="city" class="form-label">City</label>
-                        <input type="text" class="form-control" id="city" name = "city" placeholder="Enter city">
+                        <label for="endDate" class="form-label">End Date</label><br>
+                        <input type="text" class="date" id="endDate" name="endDate">
                     </div>
 
 
-                    <div class="row">
-                      
-                        <div class="col-md-4 mt-3">
-                            <label for="gender" class="form-label">Gender</label>
-                            <select id="gender" class="form-select" name="gender">
-                                <option>Male</option>
-                                <option>Female</option>
-                                <option>Other</option>
-                            </select>
-                        </div>
-                    </div>
+                    
                 </div>
 
             </div>
+
             <div class="btn-box container d-block text-center" style="width:850px;">
-              <input type="submit" value="Submit">
-              <!-- <a href="/experience">
+                <a href="header.ejs">
+                <button type="button" class="next_btn" id="next1">Back<i
+                    class="bi bi-arrow-left-circle ms-3"></i></button>
+                </a>    
+                <a href="education.ejs">
                 <button type="button" class="next_btn" id="next1">Next Step<i
                         class="bi bi-arrow-right-circle ms-3"></i></button>
-                </a> -->
-                    </div>
+                    </a>
+            </div>
 
         </form>
+        
     </div>
     <footer class="page-footer font-small black">
 		<div class="footer-copyright text-center py-3">© The Noob Squad Copyright 2023
-			
+		
 		</div>
 	</footer>
 </body>
