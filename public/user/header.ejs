@@ -8,8 +8,8 @@
 </head>
 <body>
   <h1>Enter information about Header</h1>
-  <form action="/experience" metho="GET">
-    <input type="text" name="fullName" placeholder="Full Name" id="fullName">
+  <form action="/experience" method = "GET">
+    <input type="text" class="fullName" name="fullName" id="fullName" placeholder="Full Name">
     <br>
     <br>
     <input type="text" name="city" placeholder="City" id="city">
@@ -21,12 +21,18 @@
     <input type="text" name="phone" placeholder="Phone" id="phone">
     <br>
     <br>
-    <input type="text" name="phone" placeholder="Phone" id="phone">
-    <br>
-    <br>
     <input type="text" name="email" placeholder="email" id="email">
     <br>
     <br>
+    <input type="date" name="dob" placeholder="dob" id="dob">
+    <br>
+    <br>
+    <select id="gender" class="form-select" name="gender">
+      <option>Male</option>
+      <option>Female</option>
+      <option>Other</option>
+    </select>
+    <br><br>
     <input type="submit" value="Submit">
   </form>
 </body>

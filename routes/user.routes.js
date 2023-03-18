@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
-
-
+const indexModules = require('../controllers/index.controllers');
 router.post('/login', (req, res) => {
   res.send('LOGIN');
 });
@@ -11,7 +10,7 @@ router.post('/signUp', (req, res) => {
 });
 
 router.get('/', (req, res) => {
-  res.send('DASHBOARD');
+  res.send(indexModules.info);
 });
 
 router.get('/chooseType', (req, res) => {
@@ -19,27 +18,16 @@ router.get('/chooseType', (req, res) => {
 });
 
 
-router.get('/header', (req, res) => {
-  res.render('../public/user/header.ejs');
-});
+router.get('/header', indexModules.getHeader);
 
-router.get('/experience', (req, res) => {
-  res.send('experience');
-});
+router.get('/experience', indexModules.getExperience);
 
-router.get('/education', (req, res) => {
-  res.send('education');
-});
+router.get('/education', indexModules.getEducation);
 
-router.get('/skills', (req, res) => {
-  res.send('skills');
-});
+router.get('/skills', indexModules.getSkills);
 
-router.get('/summary', (req, res) => {
-  res.send('summary');
-});
+router.get('/summary', indexModules.getSummary);
 
-router.get('/selectTemplate', (req, res) => {
-  res.send('selectTemplate');
-});
+router.get('/selectTemplate',indexModules.getSelectTemplate);
+
 module.exports = router;
