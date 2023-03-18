@@ -9,9 +9,7 @@ router.post('/signUp', (req, res) => {
   res.send('REGISTER');
 });
 
-router.get('/', (req, res) => {
-  res.send(indexModules.info);
-});
+router.get('/', indexModules.getIndex);
 
 router.get('/chooseType', (req, res) => {
   res.send('chooseType');
