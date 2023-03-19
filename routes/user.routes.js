@@ -29,6 +29,7 @@ router.get('/selectTemplate',indexModules.getSelectTemplate);
 router.get('/signUp', userModules.getSignup);
 router.post('/signUp', userModules.postSignUp);
 
+router.post('/generate-pdf', indexModules.postGeneratePDF);
 router.get('/login', userModules.getLogin);
 
 module.exports = router;
